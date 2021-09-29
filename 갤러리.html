@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <style>
+        #galery{
+            background-color: #ccc;
+            width: 400px;
+            height: 300px;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+    <section id="galery">
+
+        <img src="https://via.placeholder.com/400x300/f80/333?text=1" alt="1">
+        
+        <img src="https://via.placeholder.com/400x300/8f0/333?text=2" alt="2">
+        
+        <img src="https://via.placeholder.com/400x300/f08/333?text=3" alt="3">
+
+    </section>
+    <button class="next" onclick="nextImg();">next</button>
+    <script>
+        function nextImg(){
+
+        $('#galery img').first().appendTo('#galery')
+        }
+    </script>
+
+</body>
+</html>

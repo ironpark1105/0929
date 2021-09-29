@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>객체편집메서드</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+    
+<ul id="list">
+    <li>김밥</li>
+    <li>순대</li>
+    <li>만두</li>
+</ul>
+
+<button onclick="addMenu();">메뉴 추가</button>
+    <script>
+        function addMenu(){
+        $('#list').append("<li>신전떡볶이 2set</li>");
+    }
+</script>
+    <hr>
+    <h2>메뉴판</h2>
+    <button onclick="addMenu2('짬뽕');">짬뽕</button>
+    <button onclick="addMenu2('짜장');">짜장</button>
+    <button onclick="addMenu2('볶음밥');">볶음밥</button>
+    <button onclick="removeClass2();">메뉴삭제</button>
+
+
+    <h3>선택한 메뉴</h3>
+    <ul id="list2">
+        <li>추가한 메뉴</li>
+    </ul>
+
+<script>
+    function removeClass2(){
+        $('#list2').empty();
+    }
+
+        function addMenu2(name){
+        $('#list2').append("<li>" + name + "</li>");
+    }
+</script>
+
+<hr>
+<h2>appendTo</h2>
+<p>$('내용')appendTo('선택자')내용을 선택자에 추가 </p>
+<ul id="list3">
+    <li>first</li>
+    <li>second</li>
+    <li>third</li>
+</ul>
+
+<script>
+    //append()기능 동일 
+    $('<li>추가</li>').appendTo('#list3')
+    //위치이동
+    $('#list3 li').first().appendTo('#list3')
+
+
+</script>
+
+<h2>01. not() 부정선택 선택자 반대</h2>
+<ul id="mylist">
+    <li>내용 1 </li>
+    <li>내용 2 </li>
+    <li>내용 3 </li>
+    <li>내용 4 </li>
+</ul>
+
+<script>
+    $('#mylist li')
+    .not(':first')
+    .css('background','yellow')
+</script>
+
+
+<h2>02. 위치선택 </h2>
+</body>
+</html>
